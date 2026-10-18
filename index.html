@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Una carta para ti 💜</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Fondo: universo -->
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="space" aria-hidden="true">
+    <div class="planet p1"></div>
+    <div class="planet p2"></div>
+    <div class="planet p3"></div>
+    <span class="float-dino d1">🦖</span>
+    <span class="float-dino d2">🦕</span>
+    <span class="float-dino d3">🚀</span>
+  </div>
+
+  <!-- Suelo: tulipanes y dinosaurios -->
+  <div class="ground" aria-hidden="true">
+    <div id="tulips"></div>
+    <div class="walker w-left" id="dino1"></div>
+    <div class="walker w-right" id="dino2"></div>
+  </div>
+
+  <!-- Pantalla de inicio: el sobre -->
+  <section id="intro" class="intro">
+    <button id="envelope" class="envelope" aria-label="Abrir la carta">
+      <span class="env-back"></span>
+      <span class="env-letter">💜</span>
+      <span class="env-flap"></span>
+      <span class="env-front"></span>
+      <span class="env-heart">💜</span>
+    </button>
+    <p class="intro-text">Tengo algo para ti…<br /><small>toca el sobre</small></p>
+  </section>
+
+  <!-- Botón de música -->
+  <button id="music-btn" class="music-btn hidden" aria-label="Pausar o reproducir música">🎵</button>
+  <audio id="music" src="assets/musica.mp3" loop preload="auto"></audio>
+
+  <!-- La carta -->
+  <main id="letter" class="letter hidden">
+    <article class="paper">
+      <p class="eyebrow">✦ una carta con todo el universo dentro ✦</p>
+      <h1 id="title">Para ti 💜</h1>
+
+      <p class="reveal" id="p1"></p>
+      <p class="reveal" id="p2"></p>
+
+      <h2 class="reveal">🦕 Estoy tan orgulloso de ti</h2>
+      <p class="reveal" id="p3"></p>
+
+      <div class="cards">
+        <div class="card reveal"><span>🌷</span><b>Tu esfuerzo</b><i>Nadie trabaja como tú.</i></div>
+        <div class="card reveal"><span>🪐</span><b>Tu constancia</b><i>Tú no sueltas lo que empiezas.</i></div>
+        <div class="card reveal"><span>🦖</span><b>Tu fuerza</b><i>Más brava que un T-rex.</i></div>
+        <div class="card reveal"><span>✨</span><b>Tu corazón</b><i>El más bonito de la galaxia.</i></div>
+      </div>
+
+      <p class="reveal" id="p4"></p>
+      <p class="reveal" id="p5"></p>
+      <p class="reveal" id="p6"></p>
+
+      <p class="signature reveal" id="sign"></p>
+      <p class="hint reveal">toca la pantalla y mira qué pasa ✨</p>
+    </article>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
